@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid Ali - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <button onclick="scrollToSection('hero')" class="logo">
+                    <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span class="logo-text">Junaid Ali</span>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <ul class="desktop-nav">
+                    <li><button onclick="scrollToSection('about')">About</button></li>
+                    <li><button onclick="scrollToSection('projects')">Experience</button></li>
+                    <li><button onclick="scrollToSection('skills')">Skills</button></li>
+                    <li><button onclick="scrollToSection('contact')" class="contact-btn">Contact</button></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="closeIcon" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <ul class="mobile-nav" id="mobileNav">
+                <li><button onclick="scrollToSection('about')">About</button></li>
+                <li><button onclick="scrollToSection('projects')">Experience</button></li>
+                <li><button onclick="scrollToSection('skills')">Skills</button></li>
+                <li><button onclick="scrollToSection('contact')" class="contact-btn-mobile">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-orb-1"></div>
+            <div class="hero-orb-2"></div>
+
+            <div class="hero-content">
+                <div class="hero-inner">
+                    <div class="hero-tag">
+                        <svg class="terminal-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <span><developer /></span>
+                    </div>
+
+                    <h1>
+                        <span id="typing-text"></span>
+                        <span class="cursor"></span>
+                    </h1>
+
+                    <div class="hero-roles">
+                        <span class="role-blue">Social Media Manager</span> | 
+                        <span class="role-purple">Digital Marketer</span> | 
+                        <span class="role-cyan">Web Developer</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Dynamic and results-driven professional with proven expertise in social media management, e-commerce selling and digital marketing. Skilled in creating impactful content, managing online sales, and delivering excellent customer experiences through innovative strategies.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button onclick="scrollToSection('projects')" class="btn-primary">View My Work</button>
+                        <button onclick="scrollToSection('contact')" class="btn-secondary">Get in Touch</button>
+                    </div>
+                </div>
+
+                <button onclick="scrollToSection('about')" class="scroll-down">
+                    <svg class="bounce" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About <span class="text-blue">Me</span></h2>
+
+                <div class="about-grid">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-glow"></div>
+                        <div class="about-image-container">
+                            <img src="assets\junaid.png" alt="Junaid Ali" class="about-image">
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <p>
+                            I'm Junaid Ali, a dynamic and results-driven professional with proven expertise in social media management, e-commerce selling, and digital marketing. I specialize in creating impactful content, managing online sales, and delivering excellent customer experiences through innovative strategies.
+                        </p>
+                        <p>
+                            Certified in E-commerce, Digital Marketing, and Web Development, I have hands-on experience in boosting brand visibility and engagement. Currently advancing my technical knowledge with a focus on Computer Science to complement my practical skills in the digital marketplace.
+                        </p>
+                        <p>
+                            Based in Karachi, Pakistan, I'm passionate about leveraging technology and creative strategies to help brands grow their online presence and achieve their business goals.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-card stat-blue">
+                                <div class="stat-value">2+</div>
+                                <p class="stat-label">Years Experience</p>
+                            </div>
+                            <div class="stat-card stat-purple">
+                                <div class="stat-value">3+</div>
+                                <p class="stat-label">Certifications</p>
+                            </div>
+                            <div class="stat-card stat-cyan">
+                                <div class="stat-value">Multiple</div>
+                                <p class="stat-label">Platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects & <span class="text-blue">Experience</span></h2>
+                    <p class="section-subtitle">
+                        Explore my web development projects and professional experience in social media management, e-commerce, and digital marketing.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Calculator -->
+                    <div class="project-card clickable" onclick="openDemo('calculator')">
+                        <div class="project-image-wrapper">
+                            <img src="assets\calculator.png" alt="Calculator App" class="project-image">
+                            <span class="project-badge live-badge">Live Demo</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Calculator App</h3>
+                            <p class="project-description">A fully functional calculator web application with a modern UI. Supports basic arithmetic operations including addition, subtraction, multiplication, and division with a clean interface.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">JAVASCRIPT</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="demo-link">
+                                <span>Click to view demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: SneakerHub -->
+                    <div class="project-card clickable" onclick="openDemo('shoes')">
+                        <div class="project-image-wrapper">
+                            <img src="assets\shoes.png" alt="SneakerHub" class="project-image">
+                            <span class="project-badge live-badge">Live Demo</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>SneakerHub - Shoes E-Commerce</h3>
+                            <p class="project-description">A modern e-commerce website for sneakers and athletic shoes. Features product browsing, shopping cart functionality, search capabilities, and responsive design for all devices.</p>
+                            <div class="project-tags">
+                                <span class="tag">JAVASCRIPT</span>
+                                <span class="tag">E-Commerce</span>
+                                <span class="tag">Responsive Design</span>
+                            </div>
+                            <div class="demo-link">
+                                <span>Click to view demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Fashion Store -->
+                    <div class="project-card clickable" onclick="openDemo('clothing')">
+                        <div class="project-image-wrapper">
+                            <img src="assets\fashion clothing.png" alt="Fashion Store" class="project-image">
+                            <span class="project-badge live-badge">Live Demo</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Fashion Store - Clothing Website</h3>
+                            <p class="project-description">A stylish online fashion store featuring curated collections of clothing and accessories. Includes category filtering, wishlist functionality, newsletter subscription, and a premium shopping experience.</p>
+                            <div class="project-tags">
+                                <span class="tag">JAVASCRIPT</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">E-Commerce</span>
+                            </div>
+                            <div class="demo-link">
+                                <span>Click to view demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Social Media Management -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets\social media managment.png"alt="Social Media Management" class="project-image">
+                            <span class="project-badge duration-badge">Dec 2024 - Jul 2025</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Social Media Management</h3>
+                            <p class="project-description">Managed social media pages and created promotional content with Canva. Provided creative customer support to boost client satisfaction and engagement.</p>
+                            <div class="project-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Canva</span>
+                                <span class="tag">Content Creation</span>
+                                <span class="tag">Customer Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: E-Commerce Seller -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets\e.commerce seller platform.png" alt="E-Commerce" class="project-image">
+                            <span class="project-badge duration-badge">Jan 2024 - May 2024</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Seller - Multi-Platform</h3>
+                            <p class="project-description">Launched campaigns and managed product listings on Facebook, Instagram, and Daraz. Interacted with buyers and executed marketing strategies to drive product visibility and sales.</p>
+                            <div class="project-tags">
+                                <span class="tag">E-Commerce</span>
+                                <span class="tag">Facebook</span>
+                                <span class="tag">Instagram</span>
+                                <span class="tag">Daraz</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Digital Marketing -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets\digital marketing campaigns.png" alt="Digital Marketing" class="project-image">
+                            <span class="project-badge duration-badge">Ongoing</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Digital Marketing Campaigns</h3>
+                            <p class="project-description">Created and executed comprehensive digital marketing strategies across multiple platforms. Focused on boosting brand visibility and customer engagement through data-driven approaches.</p>
+                            <div class="project-tags">
+                                <span class="tag">Digital Marketing</span>
+                                <span class="tag">Facebook Marketing</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & <span class="text-blue">Expertise</span></h2>
+                    <p class="section-subtitle">
+                        A diverse skill set combining technical knowledge with creative marketing strategies.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon icon-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                        </div>
+                        <h3>AI Content Creation</h3>
+                        <p>Creating engaging content using AI tools and creative strategies</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon icon-purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript - Building responsive websites</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon icon-cyan">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Social Media Management</h3>
+                        <p>Managing platforms, creating content, customer engagement</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon icon-blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>E-Commerce</h3>
+                        <p>Facebook, Instagram, Daraz - Product listing & marketing</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon icon-purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Digital Marketing</h3>
+                        <p>Facebook Marketing, Campaign management, Brand visibility</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon icon-cyan">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3>Customer Communication</h3>
+                        <p>Active listening, Typing & Document Processing, Canva Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="container">
+                <h2 class="section-title">Education & <span class="text-blue">Certifications</span></h2>
+
+                <div class="education-grid">
+                    <!-- Education -->
+                    <div>
+                        <div class="education-header">
+                            <div class="education-icon icon-gradient-blue">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <h3>Education</h3>
+                        </div>
+
+                        <div class="education-list">
+                            <div class="education-item border-blue">
+                                <div class="education-degree">Intermediate in Pre-Engineering</div>
+                                <p class="education-institution">National College Bahadurabad</p>
+                                <p class="education-location">Karachi</p>
+                                <p class="education-period period-blue">2025 - Present</p>
+                            </div>
+
+                            <div class="education-item border-blue">
+                                <div class="education-degree">Matriculation in Computer Science</div>
+                                <p class="education-institution">New Grace Grammar School</p>
+                                <p class="education-location">Karachi</p>
+                                <p class="education-period period-blue">2023 - 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div>
+                        <div class="education-header">
+                            <div class="education-icon icon-gradient-purple">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Certifications</h3>
+                        </div>
+
+                        <div class="education-list">
+                            <div class="education-item border-purple">
+                                <div class="education-degree">E-Commerce in Daraz</div>
+                                <p class="education-institution">Off The School</p>
+                                <p class="education-period period-purple">Nov 2023 - Feb 2024</p>
+                            </div>
+
+                            <div class="education-item border-purple">
+                                <div class="education-degree">Fundamentals of Digital Marketing</div>
+                                <p class="education-institution">Off The School</p>
+                                <p class="education-period period-purple">Sep 2023 - Nov 2023</p>
+                            </div>
+
+                            <div class="education-item border-purple">
+                                <div class="education-degree">Web Development</div>
+                                <p class="education-institution">Off The School</p>
+                                <p class="education-period period-purple">Sep 2023 - Feb 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In <span class="text-blue">Touch</span></h2>
+                    <p class="section-subtitle">
+                        Looking for a digital marketing professional or social media manager? Let's connect and discuss how I can help grow your brand.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div>
+                        <h3 style="color: white; margin-bottom: 1.5rem;">Contact Information</h3>
+
+                        <div class="contact-info">
+                            <div class="contact-card hover-blue">
+                                <div class="contact-icon icon-gradient-blue">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <p class="contact-value">ajunaidali771@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card hover-purple">
+                                <div class="contact-icon icon-gradient-purple">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <p class="contact-value">+92 301 1160312</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card hover-cyan">
+                                <div class="contact-icon icon-gradient-cyan">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">P.I.B Colony Street, Custom Shaheed Road, Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <span>Send Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-logo">Junaid Ali</h3>
+                    <p class="footer-description">
+                        Social Media Manager & Digital Marketing Professional creating impactful brand experiences.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><button onclick="scrollToSection('about')">About</button></li>
+                        <li><button onclick="scrollToSection('projects')">Experience</button></li>
+                        <li><button onclick="scrollToSection('skills')">Skills</button></li>
+                        <li><button onclick="scrollToSection('contact')">Contact</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:ajunaidali771@gmail.com" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Junaid Ali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modals -->
+    <div id="demoModal" class="modal">
+        <div id="demoContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
