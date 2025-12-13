@@ -95,7 +95,7 @@ p {
 
 .desktop-nav {
     display: none;
-    align-items: center;
+    
     gap: 2rem;
     list-style: none;
 }
@@ -114,19 +114,7 @@ p {
     color: #60a5fa;
 }
 
-.contact-btn {
-    padding: 0.5rem 1.5rem;
-    background: linear-gradient(to right, #2563eb, #9333ea);
-    color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
-    transition: all 0.2s;
-}
 
-.contact-btn:hover {
-    background: linear-gradient(to right, #1d4ed8, #7e22ce);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-}
 
 .mobile-menu-btn {
     display: block;
@@ -163,7 +151,6 @@ p {
 .mobile-nav li button {
     display: block;
     width: 100%;
-    text-align: left;
     background: none;
     border: none;
     color: #cbd5e1;
@@ -176,19 +163,6 @@ p {
 .mobile-nav li button:hover {
     color: #60a5fa;
 }
-
-.contact-btn-mobile {
-    background: linear-gradient(to right, #2563eb, #9333ea);
-    color: white !important;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem !important;
-    transition: all 0.2s;
-}
-
-.contact-btn-mobile:hover {
-    background: linear-gradient(to right, #1d4ed8, #7e22ce);
-}
-
 @media (min-width: 768px) {
     .desktop-nav {
         display: flex;
