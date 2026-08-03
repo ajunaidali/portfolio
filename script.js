@@ -94,8 +94,8 @@ function openDemo(type) {
     demoModal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
-    if (type === 'calculator') {
-        renderCalculatorDemo();
+    if (type === 'off-the-school') {
+        renderOffTheSchoolDetail();
     }
 }
 
@@ -109,161 +109,74 @@ function closeDemo() {
     demoContent.innerHTML = '';
 }
 
-// Calculator Demo
-function renderCalculatorDemo() {
-    let display = '0';
-    let previousValue = null;
-    let operation = null;
-    let waitingForOperand = false;
-
-    const calculatorHTML = `
-        <div style="background: #0f172a; border-radius: 1rem; width: 500%; max-width: 28rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 1px solid #334155;">
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; border-bottom: 1px solid #334155;">
-                <h2 style="color: white; font-size: 1.25rem; margin: 0;">Calculator App</h2>
-                <button onclick="closeDemo()" style="padding: 0.5rem; background: none; border: none; cursor: pointer; color: white; border-radius: 0.5rem; transition: background 0.2s;">
+// Off The School – Team Project Detail
+function renderOffTheSchoolDetail() {
+    const detailHTML = `
+        <div class="project-detail">
+            <div class="project-detail-header">
+                <div>
+                    <span class="project-detail-badge">Team Project</span>
+                    <h2>Off The School – EdTech Platform</h2>
+                </div>
+                <button onclick="closeDemo()" class="project-detail-close" aria-label="Close">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
-            <div style="padding: 1.5rem;">
-                <div style="background: #020617; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #334155;">
-                    <div id="calcDisplay" style="text-align: right; color: white; font-size: 2.25rem; overflow: hidden; text-overflow: ellipsis;">0</div>
+
+            <div class="project-detail-body">
+                <p class="project-detail-notice">
+                    This project was developed as part of a team. I contributed to the UI development and implementation of assigned features.
+                </p>
+
+                <p class="project-detail-description">
+                    Off The School (OTS) is a not-for-profit EdTech platform dedicated to bridging the socio-economic gap by offering accessible formal and skills-based education. The platform includes school programs, professional courses, coaching, and career development modules — all designed to make quality education free and accessible across Pakistan.
+                </p>
+
+                <div class="project-detail-meta">
+                    <div class="project-detail-meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span>Team Project</span>
+                    </div>
+                    <div class="project-detail-meta-item">
+                        <span class="meta-label">My Role</span>
+                        <span>UI Developer</span>
+                    </div>
+                    <div class="project-detail-meta-item project-detail-meta-full">
+                        <span class="meta-label">My Contributions</span>
+                        <ul>
+                            <li>Built responsive UI layouts and page components</li>
+                            <li>Implemented frontend styling and interactive UI elements</li>
+                            <li>Developed assigned platform features as part of the team workflow</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="calcButtons" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;"></div>
+
+                <div class="project-detail-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">UI Development</span>
+                    <span class="tag">Responsive Design</span>
+                </div>
+
+                <div class="project-detail-actions">
+                    <a href="https://offtheschool.io/" target="_blank" rel="noopener noreferrer" class="btn-live-demo">
+                        View Live Demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     `;
-    
-    demoContent.innerHTML = calculatorHTML;
-    
-    const displayElement = document.getElementById('calcDisplay');
-    const buttonsContainer = document.getElementById('calcButtons');
-    
-    function updateDisplay() {
-        displayElement.textContent = display;
-    }
-    
-    function inputDigit(digit) {
-        if (waitingForOperand) {
-            display = digit;
-            waitingForOperand = false;
-        } else {
-            display = display === '0' ? digit : display + digit;
-        }
-        updateDisplay();
-    }
-    
-    function inputDecimal() {
-        if (waitingForOperand) {
-            display = '0.';
-            waitingForOperand = false;
-        } else if (display.indexOf('.') === -1) {
-            display = display + '.';
-        }
-        updateDisplay();
-    }
-    
-    function clear() {
-        display = '0';
-        previousValue = null;
-        operation = null;
-        waitingForOperand = false;
-        updateDisplay();
-    }
-    
-    function performOperation(nextOperation) {
-        const inputValue = parseFloat(display);
-        
-        if (previousValue === null) {
-            previousValue = inputValue;
-        } else if (operation) {
-            const currentValue = previousValue || 0;
-            let newValue = currentValue;
-            
-            switch (operation) {
-                case '+':
-                    newValue = currentValue + inputValue;
-                    break;
-                case '-':
-                    newValue = currentValue - inputValue;
-                    break;
-                case '*':
-                    newValue = currentValue * inputValue;
-                    break;
-                case '/':
-                    newValue = currentValue / inputValue;
-                    break;
-            }
-            
-            display = String(newValue);
-            previousValue = newValue;
-            updateDisplay();
-        }
-        
-        waitingForOperand = true;
-        operation = nextOperation;
-    }
-    
-    function handleEquals() {
-        const inputValue = parseFloat(display);
-        
-        if (previousValue !== null && operation) {
-            let result = previousValue;
-            
-            switch (operation) {
-                case '+':
-                    result = previousValue + inputValue;
-                    break;
-                case '-':
-                    result = previousValue - inputValue;
-                    break;
-                case '*':
-                    result = previousValue * inputValue;
-                    break;
-                case '/':
-                    result = previousValue / inputValue;
-                    break;
-            }
-            
-            display = String(result);
-            previousValue = null;
-            operation = null;
-            waitingForOperand = true;
-            updateDisplay();
-        }
-    }
-    
-    const buttons = [
-        { text: 'AC', action: clear, style: 'background: #dc2626; color: white; grid-column: span 2;' },
-        { text: '÷', action: () => performOperation('/'), style: 'background: #2563eb; color: white;' },
-        { text: '×', action: () => performOperation('*'), style: 'background: #2563eb; color: white;' },
-        { text: '7', action: () => inputDigit('7'), style: 'background: #1e293b; color: white;' },
-        { text: '8', action: () => inputDigit('8'), style: 'background: #1e293b; color: white;' },
-        { text: '9', action: () => inputDigit('9'), style: 'background: #1e293b; color: white;' },
-        { text: '−', action: () => performOperation('-'), style: 'background: #2563eb; color: white;' },
-        { text: '4', action: () => inputDigit('4'), style: 'background: #1e293b; color: white;' },
-        { text: '5', action: () => inputDigit('5'), style: 'background: #1e293b; color: white;' },
-        { text: '6', action: () => inputDigit('6'), style: 'background: #1e293b; color: white;' },
-        { text: '+', action: () => performOperation('+'), style: 'background: #2563eb; color: white;' },
-        { text: '1', action: () => inputDigit('1'), style: 'background: #1e293b; color: white;' },
-        { text: '2', action: () => inputDigit('2'), style: 'background: #1e293b; color: white;' },
-        { text: '3', action: () => inputDigit('3'), style: 'background: #1e293b; color: white;' },
-        { text: '=', action: handleEquals, style: 'background: #16a34a; color: white; grid-row: span 2;' },
-        { text: '0', action: () => inputDigit('0'), style: 'background: #1e293b; color: white; grid-column: span 2;' },
-        { text: '.', action: inputDecimal, style: 'background: #1e293b; color: white;' }
-    ];
-    
-    buttons.forEach(btn => {
-        const button = document.createElement('button');
-        button.textContent = btn.text;
-        button.style.cssText = `${btn.style} padding: 1rem; border: none; border-radius: 0.75rem; cursor: pointer; font-size: 1.125rem; transition: opacity 0.2s;`;
-        button.onmouseover = () => button.style.opacity = '0.8';
-        button.onmouseout = () => button.style.opacity = '1';
-        button.onclick = btn.action;
-        buttonsContainer.appendChild(button);
-    });
+
+    demoContent.innerHTML = detailHTML;
 }
 
 // Shoes Demo
