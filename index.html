@@ -85,7 +85,7 @@
 
                     <div class="hero-buttons">
                         <button onclick="scrollToSection('projects')" class="btn-primary">View My Work</button>
-                        <button onclick="scrollToSection('contact')" class="btn-secondary">Get in Touch</button>
+                        <a href="assets/Junaid-Ali-CV.pdf" download="Junaid-Ali-CV.pdf" class="btn-secondary">Download CV</a>
                     </div>
                 </div>
 
@@ -152,7 +152,59 @@
                 </div>
 
                 <div class="projects-grid">
-                    <!-- Project 1: Calculator -->
+
+ <!-- Project 1: Ahmed Engineering Company -->
+ <div class="project-card clickable" onclick="openLiveProject('https://ajunaidali.github.io/AhmedEngineeringCompany/')">
+    <div class="project-image-wrapper">
+        <img src="assets\architecture-website.webp" alt="Ahmed Engineering Company" class="project-image">
+        <span class="project-badge live-badge">Live Demo</span>
+    </div>
+    <div class="project-content">
+        <h3>Ahmed Engineering Company (AEC)</h3>
+        <p class="project-description">A professional multi-page website for a construction, civil engineering and development firm in Karachi. Showcases 20+ years of expertise with services, project galleries, quote request forms, FAQ section, newsletter signup, and a fully responsive modern UI.</p>
+        <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JAVASCRIPT</span>
+            <span class="tag">Responsive Design</span>
+        </div>
+        <div class="demo-link">
+            <span>Click to view live site</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+        </div>
+    </div>
+</div>
+
+                    <!-- Project 2: Ramadan-Calander-2026 -->
+                    <div class="project-card clickable" onclick="openLiveProject('https://github.com/ajunaidali/Ramadan-Calander-2026')">
+                        <div class="project-image-wrapper">
+                            <img src="assets\calender.png" alt="Ramadan-Calander-2026" class="project-image">
+                            <span class="project-badge live-badge">Live Demo</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Ramadan-Calander-2026</h3>
+                            <p class="project-description">Ramadan Calendar 2026 is a responsive web application that provides daily Sehri and Iftar timings with a clean, user-friendly interface. It is built using HTML, CSS, and JavaScript with a focus on accuracy, performance, and mobile responsiveness.</p>
+                            <div class="project-tags">
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Responsive Design</span>
+                            </div>
+                            <div class="demo-link">
+                                <span>Click to view live site</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Calculator -->
                     <div class="project-card clickable" onclick="openDemo('calculator')">
                         <div class="project-image-wrapper">
                             <img src="assets\calculator.png" alt="Calculator App" class="project-image">
@@ -177,55 +229,9 @@
                         </div>
                     </div>
 
-                    <!-- Project 2: SneakerHub -->
-                    <div class="project-card clickable" onclick="openDemo('shoes')">
-                        <div class="project-image-wrapper">
-                            <img src="assets\shoes.png" alt="SneakerHub" class="project-image">
-                            <span class="project-badge live-badge">Live Demo</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>SneakerHub - Shoes E-Commerce</h3>
-                            <p class="project-description">A modern e-commerce website for sneakers and athletic shoes. Features product browsing, shopping cart functionality, search capabilities, and responsive design for all devices.</p>
-                            <div class="project-tags">
-                                <span class="tag">JAVASCRIPT</span>
-                                <span class="tag">E-Commerce</span>
-                                <span class="tag">Responsive Design</span>
-                            </div>
-                            <div class="demo-link">
-                                <span>Click to view demo</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                   
 
-                    <!-- Project 3: Fashion Store -->
-                    <div class="project-card clickable" onclick="openDemo('clothing')">
-                        <div class="project-image-wrapper">
-                            <img src="assets\fashion clothing.png" alt="Fashion Store" class="project-image">
-                            <span class="project-badge live-badge">Live Demo</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Fashion Store - Clothing Website</h3>
-                            <p class="project-description">A stylish online fashion store featuring curated collections of clothing and accessories. Includes category filtering, wishlist functionality, newsletter subscription, and a premium shopping experience.</p>
-                            <div class="project-tags">
-                                <span class="tag">JAVASCRIPT</span>
-                                <span class="tag">UI/UX</span>
-                                <span class="tag">E-Commerce</span>
-                            </div>
-                            <div class="demo-link">
-                                <span>Click to view demo</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <!-- Project 4: Social Media Management -->
                     <div class="project-card">

@@ -96,11 +96,11 @@ function openDemo(type) {
     
     if (type === 'calculator') {
         renderCalculatorDemo();
-    } else if (type === 'shoes') {
-        renderShoesDemo();
-    } else if (type === 'clothing') {
-        renderClothingDemo();
     }
+}
+
+function openLiveProject(url) {
+    window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 function closeDemo() {
