@@ -52,14 +52,25 @@ const mobileNav = document.getElementById('mobileNav');
 const menuIcon = document.getElementById('menuIcon');
 const closeIcon = document.getElementById('closeIcon');
 
+function setMobileMenuOpen(isOpen) {
+    mobileNav.classList.toggle('active', isOpen);
+    menuIcon.style.display = isOpen ? 'none' : 'block';
+    closeIcon.style.display = isOpen ? 'block' : 'none';
+    mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen && window.innerWidth <= 767 ? 'hidden' : '';
+}
+
+mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
+mobileMenuBtn.setAttribute('aria-expanded', 'false');
+mobileMenuBtn.setAttribute('aria-controls', 'mobileNav');
+
 mobileMenuBtn.addEventListener('click', function() {
-    mobileNav.classList.toggle('active');
-    if (mobileNav.classList.contains('active')) {
-        menuIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-    } else {
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
+    setMobileMenuOpen(!mobileNav.classList.contains('active'));
+});
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 767 && mobileNav.classList.contains('active')) {
+        setMobileMenuOpen(false);
     }
 });
 
@@ -69,9 +80,7 @@ function scrollToSection(id) {
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
         // Close mobile menu if open
-        mobileNav.classList.remove('active');
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
+        setMobileMenuOpen(false);
     }
 }
 
