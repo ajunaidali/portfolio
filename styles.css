@@ -330,7 +330,7 @@ p {
 .scroll-down {
     position: absolute;
     bottom: 2rem;
-    left: 50.5%;
+    left: 54.4%;
     transform: translateX(-50%);
     background: none;
     border: none;
@@ -348,6 +348,15 @@ p {
     }
     50% {
         transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+@keyframes mobile-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
 
@@ -1420,7 +1429,12 @@ footer {
     }
 
     .scroll-down {
-        bottom: 1rem;
+        position: static;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        animation: mobile-bounce 2s infinite;
+        margin-top: 0.75rem;
     }
 
     /* About Section */
